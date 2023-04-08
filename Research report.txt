@@ -1,0 +1,13 @@
+Approach:
+
+For scraping the Dmart website, I used Python's BeautifulSoup and requests library. I made a GET request to the Dmart website and parsed the HTML content using BeautifulSoup. After analyzing the HTML structure of the website, I was able to locate the necessary information, such as the store name, address, timings, coordinates, and phone number, using CSS selectors.
+
+I created a function that accepts the URL of the Dmart website and extracts the required information. The function stores the extracted data in a dictionary and appends it to a list. Finally, the function writes the data to a CSV file using the csv module.
+
+Challenges:
+
+One of the main challenges I faced was extracting the coordinates of the store locations. The Dmart website did not provide the coordinates directly, so I had to use an external API to obtain the coordinates based on the store addresses. I used the Geopy library to do this. However, the API had a limit on the number of requests that could be made in a given time frame, so I had to implement a delay between the requests to avoid exceeding the limit.
+
+Another challenge I faced was handling errors that occurred during the scraping process. The Dmart website had a large number of store locations, and sometimes the scraper would encounter errors, such as timeouts or missing data. To handle these errors, I used try-except blocks and wrote error messages to a log file to help with debugging.
+
+Overall, the web scraping project was a great way to practice my data science skills and learn new techniques. Despite the challenges, I was able to successfully scrape the necessary data from the Dmart website and store it in a CSV file.
